@@ -3,7 +3,7 @@ import Head from "next/head"
 import {useRouter} from "next/router";
 
 const AdminProvider = (props) => {
-    const router = useRouter()
+    const router = useRouter();
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -12,8 +12,8 @@ const AdminProvider = (props) => {
 
     const controlAdmin = async () => {
         const getAdmin = await sessionStorage.getItem("token")
+        await getAdmin === null && await router.push("/admin/login")
         setLoading(false)
-        getAdmin === null && await router.push("/admin/login")
     }
 
     return (

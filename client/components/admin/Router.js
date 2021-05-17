@@ -18,7 +18,7 @@ const Router = (props) => {
 						className="transition-all left-0 rounded-l-none inline-flex border border-gray-100 p-2 transition-all flex rounded-lg">
 						<div className="flex-col">
 							{
-								leftBar.map(item => <Bar show={showBar} title={item.title} icon={item.icon} url={item.url}/>)
+								leftBar.map((item,i) => <Bar key={i} show={showBar} title={item.title} icon={item.icon} url={item.url}/>)
 							}
 						</div>
 						<div className="z-10 flex justify-center self-center">

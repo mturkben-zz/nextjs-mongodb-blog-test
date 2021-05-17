@@ -1,11 +1,11 @@
 import React from "react";
-import {Router} from "../../../components";
+import {Router, AddBlogEditor} from "../../../components";
 
 const AddBlog = () => {
 	
 	return (
 		<Router title="Admin | Add-Blog Page">
-			Add-Blog Page
+			<AddBlogEditor/>
 		</Router>
 	);
 }

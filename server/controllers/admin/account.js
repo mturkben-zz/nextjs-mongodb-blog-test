@@ -3,6 +3,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 const User = require("../../models/User");
 const checkFields = require("../../utilities/checkFields");
+
+
 const adminLogin = async (req, res) => {
     const {username, password} = req.body;
 
@@ -44,7 +46,7 @@ const adminRegister = async (req, res) => {
         await newUser
             .save()
             .then(() => {
-                res.status(200).json({status: "OK", user: generatePassword});
+                res.status(200).json({status: "OK"});
             })
             .catch((err) => res.status(403).json({status: "NO", notice: "Error, Try Again"}));
     }
