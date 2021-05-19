@@ -24,7 +24,8 @@ const AddBlogEditor = () => {
 	
 	const send = async (e) => {
 		e.preventDefault();
-		console.log("isHere");
+		
+		
 		const _send = await fetch("http://localhost:3001/api/admin/addBlog", {
 			method: "POST",
 			headers: {

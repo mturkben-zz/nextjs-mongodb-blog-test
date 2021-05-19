@@ -11,7 +11,8 @@ const BlogSchema = new mongoose.Schema({
     },
     query: {
         type: String,
-        required: true
+        required: true,
+        unique:true
     }
 })
 
